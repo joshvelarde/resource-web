@@ -1,0 +1,129 @@
+/* Universal Styles */
+@font-face {
+    font-family: 'CustomFont';
+    src: url('your-font-file.ttf') format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'CustomFont', Arial, sans-serif;
+}
+
+/* Global Body Styling */
+body {
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+}
+
+/* Header Styling */
+.header {
+    width: 100%;
+    height: 80px;
+    background-color: #666;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+    z-index: 1000;
+}
+
+/* Footer Styling */
+.footer {
+    width: 100%;
+    height: 80px;
+    background-color: #ddd;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Logo Styling */
+.logo img {
+    max-width: 300px;
+    height: auto;
+}
+
+/* ------------------ */
+/* INDEX PAGE STYLES */
+/* ------------------ */
+
+/* Grid Layout */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(2, 200px);
+    gap: 10px;
+}
+
+/* Grid Buttons */
+.grid div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #666;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+/* Hover Effects for Dark Grey Buttons */
+.grid div:not(.light):hover {
+    background-color: #2F71BA;
+    transform: scale(1.06);
+}
+
+/* Light Grey Buttons */
+.grid .light {
+    background-color: #ddd;
+    color: black;
+}
+
+/* Light Grey Button Hover Effect */
+.grid .light:hover {
+    transform: scale(0.97);
+    background-color: white;
+    color: #ddd;
+}
+
+/* Clickable Buttons */
+.grid a {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .grid {
+        grid-template-columns: repeat(2, 160px);
+        grid-template-rows: repeat(2, 160px);
+        gap: 8px;
+    }
+}

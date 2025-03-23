@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media - Nintendo Archive</title>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            background-color: #fff;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .header {
+            width: 100%;
+            height: 80px;
+            background-color: #666;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding-left: 20px;
+        }
+        
+        .header img {
+            height: 70%;
+        }
+        
+        .footer {
+            width: 100%;
+            height: 80px;
+            background-color: #ddd;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+        }
+        
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1400px;
+            align-items: center;
+            gap: 40px;
+        }
+        
+        .logo {
+            flex: 1;
+            text-align: left;
+        }
+        
+        .logo img {
+            max-width: 500px;
+            height: auto;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 200px);
+            grid-template-rows: repeat(3, 200px);
+            gap: 10px;
+        }
+        
+        .grid div {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-color: #666;
+            color: white;
+            font-size: 17px;
+            font-weight: bold;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        
+        .grid div:not(.light):hover {
+            background-color: #2F71BA;
+            transition: background-color 0.3s ease-in-out;
+        }
+        
+        .grid .light {
+            background-color: #ddd;
+            color: black;
+        }
+        
+        .grid .light a {
+            text-decoration: none;
+            color: black;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            font-size: 17px;
+            transition: font-size 0.2s ease-in-out;
+        }
+        
+        .grid .light a:hover {
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <a href="index.html"><img src="images/header-logo.png" alt="Nintendo Archive Logo"></a>
+    </div>
+    
+    <div class="container">
+        <div class="logo">
+            <a href="index.html"><img src="images/medialogo.png" alt="Nintendo Archive Logo"></a>
+        </div>
+        <div class="grid">
+            <div></div>
+            <div class="light"><a href="media/nintendo-wifi.html">Nintendo Wi-Fi</a></div>
+            <div></div>
+            <div class="light"><a href="media/streetpass.html">Streetpass</a></div>
+            <div></div>
+            <div class="light"><a href="media/miiverse.html">Miiverse</a></div>
+            <div></div>
+            <div class="light"><a href="media/club-nintendo.html">Club Nintendo</a></div>
+            <div></div>
+        </div>
+    </div>
+    
+    <div class="footer"></div>
+</body>
+</html>
